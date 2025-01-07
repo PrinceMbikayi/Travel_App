@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import Model from "../components/Model";
 import Register from "../auth/Register";
 import Login from "../auth/Login";
+import Destination from "../components/Destination";
 
 const Home = () => {
   const { dispatch } = useContext(ModelContext);
@@ -27,10 +28,7 @@ const Home = () => {
           name="description"
           content="Travel to the world with travel friends"
         />
-        <meta 
-          name="keywords"
-          content="travel, travel tours, airline"
-        />
+        <meta name="keywords" content="travel, travel tours, airline" />
       </Helmet>
       <Header heading={state.heading} paragraph={state.paragraph}>
         <button
@@ -48,6 +46,7 @@ const Home = () => {
       <Model current={loginModel}>
         <Login currentModel={registerModel} />
       </Model>
+      <Destination />
     </>
   );
 };

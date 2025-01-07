@@ -1,0 +1,28 @@
+@use "../abstracts" as *;
+
+.destinations {
+    margin: 5rem 0;
+    &__heading {
+        font-size: 2.8rem;
+        color: $black;
+        font-weight: 500;
+        width: 60%;
+        line-height: 4rem;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: -.5rem;
+            left: 0;
+            width: 40%;
+            height: .2rem;
+            background: $main1;
+        }
+    }
+    &__paragraph {
+        font-size: 1.6rem;
+        line-height: 2.7rem;
+        color: $silverlight;
+        font-weight: 400;
+    }
+}
